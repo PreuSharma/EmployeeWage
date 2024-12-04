@@ -64,3 +64,30 @@ function calculate_DailyWage(isPresent) {
 }
 
 calculate_DailyWage(isPresent);
+
+
+
+
+
+console.log("===================uc4==============");
+// uc4 - Calculate Monthly Wages (20 Working Days)
+
+let WorkingDays = 20;
+
+function calculate_MonthlyWages() {
+    let totalWorkingHours = 0;
+    let total_MonthlyWage = 0;
+    for (let day = 1; day <= WorkingDays; day++) {
+        console.log("Day: " + day);
+        let PresentOrNot = checkAttendence();
+        let dailyHours = workingHours(PresentOrNot);
+        let dailyWage = dailyHours * wagePerHour;
+
+        totalWorkingHours += dailyHours;
+        total_MonthlyWage += dailyWage;
+    }
+    console.log("Total monthly wage: " + total_MonthlyWage);
+    return total_MonthlyWage;
+}
+
+calculate_MonthlyWages();
