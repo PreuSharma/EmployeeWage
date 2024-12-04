@@ -52,3 +52,15 @@ let isPresent = checkAttendence();
 let hoursWorked = workingHours(isPresent);
 console.log("Total Hours Worked: " + hoursWorked);
 
+
+console.log("=================uc3=================")
+// uc3 - Calculate Daily Wage
+
+function calculate_DailyWage(isPresent) {
+    let workHours = workingHours(isPresent);
+    let daily_Wage = workHours * wagePerHour;
+    console.log("Daily Wage: " + daily_Wage);
+    return daily_Wage;
+}
+
+calculate_DailyWage(isPresent);
