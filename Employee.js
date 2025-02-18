@@ -1,3 +1,4 @@
+console.log("Welcome to Employee Wage");
 const Present=1;
 const Absent=0;
 let isPresent=false;    
